@@ -24,23 +24,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-                       
-        redLightView.layer.cornerRadius = redLightView.frame.width / 2
-        
-        //redLightView.layer.cornerRadius = redLightView.frame.height / 2
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        redLightView.layer.cornerRadius = redLightView.frame.height / 2
         yellowLightView.layer.cornerRadius = yellowLightView.frame.height / 2
         greenLightView.layer.cornerRadius = greenLightView.frame.height / 2
-        
-        
-        
-        
         
         redLightView.alpha = lightOff
         yellowLightView.alpha = lightOff
         greenLightView.alpha = lightOff
-
     }
-
+    
     // MARK: - IB Actions
     @IBAction func startButtonPressed() {
         
