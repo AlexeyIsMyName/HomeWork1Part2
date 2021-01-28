@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,39 +13,42 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeWork1Part2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ2-C9-lUv">
-                                <rect key="frame" x="107" y="813" width="214" height="59"/>
+                                <rect key="frame" x="103.66666666666669" y="783" width="207" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q1y-yS-ueE"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pgm-Qn-d1M">
-                                <rect key="frame" x="128.33333333333331" y="54" width="171.33333333333331" height="553.66666666666663"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pgm-Qn-d1M">
+                                <rect key="frame" x="145" y="64.000000000000028" width="124" height="412.66666666666674"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqM-a5-C1R">
-                                        <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="171.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="124.33333333333333"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="sqM-a5-C1R" secondAttribute="height" multiplier="1:1" id="ab1-os-07e"/>
+                                            <constraint firstAttribute="width" secondItem="sqM-a5-C1R" secondAttribute="height" multiplier="1:1" id="0eW-2a-0Uv"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INw-Q6-JkD">
-                                        <rect key="frame" x="0.0" y="191.33333333333337" width="171.33333333333334" height="171"/>
+                                        <rect key="frame" x="0.0" y="144.33333333333334" width="124" height="124.00000000000003"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="INw-Q6-JkD" secondAttribute="height" multiplier="1:1" id="Swa-k1-9cT"/>
+                                            <constraint firstAttribute="width" secondItem="INw-Q6-JkD" secondAttribute="height" multiplier="1:1" id="JYG-Qc-ca6"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgh-oO-lkz">
-                                        <rect key="frame" x="0.0" y="382.33333333333331" width="171.33333333333334" height="171.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="288.33333333333331" width="124" height="124.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="vgh-oO-lkz" secondAttribute="height" multiplier="1:1" id="kYX-jk-Sht"/>
+                                            <constraint firstAttribute="width" secondItem="vgh-oO-lkz" secondAttribute="height" multiplier="1:1" id="ahe-gg-n1b"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -54,17 +57,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pgm-Qn-d1M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="FAf-kC-Npe"/>
+                            <constraint firstItem="Pgm-Qn-d1M" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="EIV-bi-Gz8"/>
+                            <constraint firstItem="Pgm-Qn-d1M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FAf-kC-Npe"/>
                             <constraint firstItem="Pgm-Qn-d1M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JkW-h8-BB0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HZ2-C9-lUv" secondAttribute="bottom" constant="20" id="RWs-8B-FSW"/>
                             <constraint firstItem="HZ2-C9-lUv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="VpG-FZ-ing"/>
-                            <constraint firstItem="Pgm-Qn-d1M" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="pjl-aJ-88q"/>
                             <constraint firstItem="HZ2-C9-lUv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uWR-6R-x8d"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLightView" destination="vgh-oO-lkz" id="d2W-hm-QNg"/>
                         <outlet property="redLightView" destination="sqM-a5-C1R" id="Xru-EH-omT"/>
+                        <outlet property="startButton" destination="HZ2-C9-lUv" id="3Yh-L6-MfX"/>
                         <outlet property="yellowLightView" destination="INw-Q6-JkD" id="Bpl-Ao-9jS"/>
                     </connections>
                 </viewController>
