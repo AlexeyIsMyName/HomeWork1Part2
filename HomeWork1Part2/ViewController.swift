@@ -22,18 +22,18 @@ class ViewController: UIViewController {
     // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        redLightView.layer.cornerRadius = redLightView.frame.height / 2
-        yellowLightView.layer.cornerRadius = yellowLightView.frame.height / 2
-        greenLightView.layer.cornerRadius = greenLightView.frame.height / 2
+        startButton.layer.cornerRadius = 10
         
         redLightView.alpha = lightOff
         yellowLightView.alpha = lightOff
         greenLightView.alpha = lightOff
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redLightView.layer.cornerRadius = redLightView.frame.height / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.height / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.height / 2
     }
     
     // MARK: - IB Actions
@@ -54,6 +54,8 @@ class ViewController: UIViewController {
             redLightView.alpha = lightOn
         }
         
-        startButton.setTitle("Next", for: .normal)
+        if startButton.currentTitle == "Start" {
+            startButton.setTitle("Next", for: .normal)
+        }
     }
 }
